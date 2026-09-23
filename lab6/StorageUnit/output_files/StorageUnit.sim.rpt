@@ -1,0 +1,237 @@
+Simulator report for StorageUnit
+Tue Jun 23 22:07:03 2026
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 51 nodes     ;
+; Simulation Coverage         ;       5.88 % ;
+; Total Number of Transitions ; 46           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                    ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                  ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                               ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                     ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                      ;               ;
+; Vector input source                                                                        ; /home/student2/stabeeb/Downloads/COE328/lab6/StorageUnit/StorageUnit.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                       ; On            ;
+; Check outputs                                                                              ; Off                                                                      ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                       ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                       ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                       ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                       ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                      ; Off           ;
+; Detect glitches                                                                            ; Off                                                                      ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                      ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                      ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                      ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                      ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                       ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                               ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                      ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                      ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                     ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       5.88 % ;
+; Total nodes checked                                 ; 51           ;
+; Total output ports checked                          ; 51           ;
+; Total output ports with complete 1/0-value coverage ; 3            ;
+; Total output ports with no 1/0-value coverage       ; 23           ;
+; Total output ports with no 1-value coverage         ; 26           ;
+; Total output ports with no 0-value coverage         ; 45           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                    ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |StorageUnit|Reset_A ; |StorageUnit|Reset_A ; out              ;
+; |StorageUnit|Clk     ; |StorageUnit|Clk     ; out              ;
+; |StorageUnit|Reset_B ; |StorageUnit|Reset_B ; out              ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |StorageUnit|A[4]               ; |StorageUnit|A[4]               ; out              ;
+; |StorageUnit|A[0]               ; |StorageUnit|A[0]               ; out              ;
+; |StorageUnit|Bo[7]              ; |StorageUnit|Bo[7]              ; pin_out          ;
+; |StorageUnit|Bo[6]              ; |StorageUnit|Bo[6]              ; pin_out          ;
+; |StorageUnit|Bo[5]              ; |StorageUnit|Bo[5]              ; pin_out          ;
+; |StorageUnit|Bo[4]              ; |StorageUnit|Bo[4]              ; pin_out          ;
+; |StorageUnit|Bo[3]              ; |StorageUnit|Bo[3]              ; pin_out          ;
+; |StorageUnit|Bo[2]              ; |StorageUnit|Bo[2]              ; pin_out          ;
+; |StorageUnit|Bo[1]              ; |StorageUnit|Bo[1]              ; pin_out          ;
+; |StorageUnit|Bo[0]              ; |StorageUnit|Bo[0]              ; pin_out          ;
+; |StorageUnit|B[7]               ; |StorageUnit|B[7]               ; out              ;
+; |StorageUnit|B[6]               ; |StorageUnit|B[6]               ; out              ;
+; |StorageUnit|B[5]               ; |StorageUnit|B[5]               ; out              ;
+; |StorageUnit|B[4]               ; |StorageUnit|B[4]               ; out              ;
+; |StorageUnit|B[3]               ; |StorageUnit|B[3]               ; out              ;
+; |StorageUnit|B[2]               ; |StorageUnit|B[2]               ; out              ;
+; |StorageUnit|B[1]               ; |StorageUnit|B[1]               ; out              ;
+; |StorageUnit|B[0]               ; |StorageUnit|B[0]               ; out              ;
+; |StorageUnit|SUlatch:inst1|Q[7] ; |StorageUnit|SUlatch:inst1|Q[7] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[6] ; |StorageUnit|SUlatch:inst1|Q[6] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[5] ; |StorageUnit|SUlatch:inst1|Q[5] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[4] ; |StorageUnit|SUlatch:inst1|Q[4] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[3] ; |StorageUnit|SUlatch:inst1|Q[3] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[2] ; |StorageUnit|SUlatch:inst1|Q[2] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[1] ; |StorageUnit|SUlatch:inst1|Q[1] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[0] ; |StorageUnit|SUlatch:inst1|Q[0] ; regout           ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |StorageUnit|Ao[7]              ; |StorageUnit|Ao[7]              ; pin_out          ;
+; |StorageUnit|Ao[6]              ; |StorageUnit|Ao[6]              ; pin_out          ;
+; |StorageUnit|Ao[5]              ; |StorageUnit|Ao[5]              ; pin_out          ;
+; |StorageUnit|Ao[4]              ; |StorageUnit|Ao[4]              ; pin_out          ;
+; |StorageUnit|Ao[3]              ; |StorageUnit|Ao[3]              ; pin_out          ;
+; |StorageUnit|Ao[2]              ; |StorageUnit|Ao[2]              ; pin_out          ;
+; |StorageUnit|Ao[1]              ; |StorageUnit|Ao[1]              ; pin_out          ;
+; |StorageUnit|Ao[0]              ; |StorageUnit|Ao[0]              ; pin_out          ;
+; |StorageUnit|A[7]               ; |StorageUnit|A[7]               ; out              ;
+; |StorageUnit|A[6]               ; |StorageUnit|A[6]               ; out              ;
+; |StorageUnit|A[5]               ; |StorageUnit|A[5]               ; out              ;
+; |StorageUnit|A[4]               ; |StorageUnit|A[4]               ; out              ;
+; |StorageUnit|A[3]               ; |StorageUnit|A[3]               ; out              ;
+; |StorageUnit|A[2]               ; |StorageUnit|A[2]               ; out              ;
+; |StorageUnit|A[1]               ; |StorageUnit|A[1]               ; out              ;
+; |StorageUnit|A[0]               ; |StorageUnit|A[0]               ; out              ;
+; |StorageUnit|Bo[7]              ; |StorageUnit|Bo[7]              ; pin_out          ;
+; |StorageUnit|Bo[6]              ; |StorageUnit|Bo[6]              ; pin_out          ;
+; |StorageUnit|Bo[5]              ; |StorageUnit|Bo[5]              ; pin_out          ;
+; |StorageUnit|Bo[4]              ; |StorageUnit|Bo[4]              ; pin_out          ;
+; |StorageUnit|Bo[3]              ; |StorageUnit|Bo[3]              ; pin_out          ;
+; |StorageUnit|Bo[2]              ; |StorageUnit|Bo[2]              ; pin_out          ;
+; |StorageUnit|Bo[1]              ; |StorageUnit|Bo[1]              ; pin_out          ;
+; |StorageUnit|Bo[0]              ; |StorageUnit|Bo[0]              ; pin_out          ;
+; |StorageUnit|B[7]               ; |StorageUnit|B[7]               ; out              ;
+; |StorageUnit|B[6]               ; |StorageUnit|B[6]               ; out              ;
+; |StorageUnit|B[3]               ; |StorageUnit|B[3]               ; out              ;
+; |StorageUnit|B[1]               ; |StorageUnit|B[1]               ; out              ;
+; |StorageUnit|B[0]               ; |StorageUnit|B[0]               ; out              ;
+; |StorageUnit|SUlatch:inst1|Q[7] ; |StorageUnit|SUlatch:inst1|Q[7] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[6] ; |StorageUnit|SUlatch:inst1|Q[6] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[5] ; |StorageUnit|SUlatch:inst1|Q[5] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[4] ; |StorageUnit|SUlatch:inst1|Q[4] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[3] ; |StorageUnit|SUlatch:inst1|Q[3] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[2] ; |StorageUnit|SUlatch:inst1|Q[2] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[1] ; |StorageUnit|SUlatch:inst1|Q[1] ; regout           ;
+; |StorageUnit|SUlatch:inst1|Q[0] ; |StorageUnit|SUlatch:inst1|Q[0] ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[7]  ; |StorageUnit|SUlatch:inst|Q[7]  ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[6]  ; |StorageUnit|SUlatch:inst|Q[6]  ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[5]  ; |StorageUnit|SUlatch:inst|Q[5]  ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[4]  ; |StorageUnit|SUlatch:inst|Q[4]  ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[3]  ; |StorageUnit|SUlatch:inst|Q[3]  ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[2]  ; |StorageUnit|SUlatch:inst|Q[2]  ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[1]  ; |StorageUnit|SUlatch:inst|Q[1]  ; regout           ;
+; |StorageUnit|SUlatch:inst|Q[0]  ; |StorageUnit|SUlatch:inst|Q[0]  ; regout           ;
++---------------------------------+---------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue Jun 23 22:07:03 2026
+Info: Command: quartus_sim --simulation_results_format=VWF StorageUnit -c StorageUnit
+Info (324025): Using vector source file "/home/student2/stabeeb/Downloads/COE328/lab6/StorageUnit/StorageUnit.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Clr" in design.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       5.88 %
+Info (328052): Number of transitions in simulation is 46
+Info (324045): Vector file StorageUnit.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 274 megabytes
+    Info: Processing ended: Tue Jun 23 22:07:04 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

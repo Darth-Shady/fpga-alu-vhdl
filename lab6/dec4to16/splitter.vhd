@@ -1,0 +1,16 @@
+-- Splitter
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY splitter IS
+    PORT ( S     : in  std_logic_vector(3 downto 0);
+           X2to0 : out std_logic_vector(2 downto 0);
+           Y3    : out std_logic );
+END ENTITY;
+
+ARCHITECTURE behavior OF splitter IS
+BEGIN
+    X2to0 <= S(2 downto 0);
+    Y3    <= S(3);
+END behavior;

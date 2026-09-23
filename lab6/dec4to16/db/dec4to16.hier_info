@@ -1,0 +1,157 @@
+|dec4to16
+Y[0] <= Combiner:inst5.Y[0]
+Y[1] <= Combiner:inst5.Y[1]
+Y[2] <= Combiner:inst5.Y[2]
+Y[3] <= Combiner:inst5.Y[3]
+Y[4] <= Combiner:inst5.Y[4]
+Y[5] <= Combiner:inst5.Y[5]
+Y[6] <= Combiner:inst5.Y[6]
+Y[7] <= Combiner:inst5.Y[7]
+Y[8] <= Combiner:inst5.Y[8]
+Y[9] <= Combiner:inst5.Y[9]
+Y[10] <= Combiner:inst5.Y[10]
+Y[11] <= Combiner:inst5.Y[11]
+Y[12] <= Combiner:inst5.Y[12]
+Y[13] <= Combiner:inst5.Y[13]
+Y[14] <= Combiner:inst5.Y[14]
+Y[15] <= Combiner:inst5.Y[15]
+S[0] => splitter:inst7.S[0]
+S[1] => splitter:inst7.S[1]
+S[2] => splitter:inst7.S[2]
+S[3] => splitter:inst7.S[3]
+En => inst3.IN1
+En => inst4.IN0
+
+
+|dec4to16|Combiner:inst5
+X[0] => Y[0].DATAIN
+X[1] => Y[1].DATAIN
+X[2] => Y[2].DATAIN
+X[3] => Y[3].DATAIN
+X[4] => Y[4].DATAIN
+X[5] => Y[5].DATAIN
+X[6] => Y[6].DATAIN
+X[7] => Y[7].DATAIN
+Z[8] => Y[8].DATAIN
+Z[9] => Y[9].DATAIN
+Z[10] => Y[10].DATAIN
+Z[11] => Y[11].DATAIN
+Z[12] => Y[12].DATAIN
+Z[13] => Y[13].DATAIN
+Z[14] => Y[14].DATAIN
+Z[15] => Y[15].DATAIN
+Y[0] <= X[0].DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= X[1].DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= X[2].DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= X[3].DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= X[4].DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= X[5].DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= X[6].DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= X[7].DB_MAX_OUTPUT_PORT_TYPE
+Y[8] <= Z[8].DB_MAX_OUTPUT_PORT_TYPE
+Y[9] <= Z[9].DB_MAX_OUTPUT_PORT_TYPE
+Y[10] <= Z[10].DB_MAX_OUTPUT_PORT_TYPE
+Y[11] <= Z[11].DB_MAX_OUTPUT_PORT_TYPE
+Y[12] <= Z[12].DB_MAX_OUTPUT_PORT_TYPE
+Y[13] <= Z[13].DB_MAX_OUTPUT_PORT_TYPE
+Y[14] <= Z[14].DB_MAX_OUTPUT_PORT_TYPE
+Y[15] <= Z[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dec4to16|dec3to8:inst
+S[0] => Mux0.IN10
+S[0] => Mux1.IN10
+S[0] => Mux2.IN10
+S[0] => Mux3.IN10
+S[0] => Mux4.IN10
+S[0] => Mux5.IN10
+S[0] => Mux6.IN10
+S[0] => Mux7.IN10
+S[1] => Mux0.IN9
+S[1] => Mux1.IN9
+S[1] => Mux2.IN9
+S[1] => Mux3.IN9
+S[1] => Mux4.IN9
+S[1] => Mux5.IN9
+S[1] => Mux6.IN9
+S[1] => Mux7.IN9
+S[2] => Mux0.IN8
+S[2] => Mux1.IN8
+S[2] => Mux2.IN8
+S[2] => Mux3.IN8
+S[2] => Mux4.IN8
+S[2] => Mux5.IN8
+S[2] => Mux6.IN8
+S[2] => Mux7.IN8
+En => Y~0.OUTPUTSELECT
+En => Y~1.OUTPUTSELECT
+En => Y~2.OUTPUTSELECT
+En => Y~3.OUTPUTSELECT
+En => Y~4.OUTPUTSELECT
+En => Y~5.OUTPUTSELECT
+En => Y~6.OUTPUTSELECT
+En => Y~7.OUTPUTSELECT
+Y[0] <= Y~7.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y~6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y~5.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y~4.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y~3.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y~2.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y~1.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dec4to16|splitter:inst7
+S[0] => X2to0[0].DATAIN
+S[1] => X2to0[1].DATAIN
+S[2] => X2to0[2].DATAIN
+S[3] => Y3.DATAIN
+X2to0[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+X2to0[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+X2to0[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= S[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dec4to16|dec3to8:inst1
+S[0] => Mux0.IN10
+S[0] => Mux1.IN10
+S[0] => Mux2.IN10
+S[0] => Mux3.IN10
+S[0] => Mux4.IN10
+S[0] => Mux5.IN10
+S[0] => Mux6.IN10
+S[0] => Mux7.IN10
+S[1] => Mux0.IN9
+S[1] => Mux1.IN9
+S[1] => Mux2.IN9
+S[1] => Mux3.IN9
+S[1] => Mux4.IN9
+S[1] => Mux5.IN9
+S[1] => Mux6.IN9
+S[1] => Mux7.IN9
+S[2] => Mux0.IN8
+S[2] => Mux1.IN8
+S[2] => Mux2.IN8
+S[2] => Mux3.IN8
+S[2] => Mux4.IN8
+S[2] => Mux5.IN8
+S[2] => Mux6.IN8
+S[2] => Mux7.IN8
+En => Y~0.OUTPUTSELECT
+En => Y~1.OUTPUTSELECT
+En => Y~2.OUTPUTSELECT
+En => Y~3.OUTPUTSELECT
+En => Y~4.OUTPUTSELECT
+En => Y~5.OUTPUTSELECT
+En => Y~6.OUTPUTSELECT
+En => Y~7.OUTPUTSELECT
+Y[0] <= Y~7.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y~6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y~5.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y~4.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y~3.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y~2.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y~1.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
